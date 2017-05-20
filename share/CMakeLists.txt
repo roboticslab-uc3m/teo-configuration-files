@@ -11,4 +11,8 @@ yarp_configure_external_installation(teo-configuration-files)
 ### Go through single applications
 
 add_subdirectory(kinematics)
+add_subdirectory(teoBase)
+add_subdirectory(teoSimBase)
+add_subdirectory(teoTools)
+add_subdirectory(yarpmotorgui)
 
