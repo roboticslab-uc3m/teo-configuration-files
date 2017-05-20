@@ -9,6 +9,7 @@ include(YarpInstallationHelpers)
 yarp_configure_external_installation(teo-configuration-files)
 
 yarp_install(FILES ymanager.ini DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
+yarp_install(FILES ../doc/fig/teo-apps-64x64.png DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
 
 ### Go through single applications
 
