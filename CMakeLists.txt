@@ -52,6 +52,7 @@ list(APPEND CMAKE_MODULE_PATH ${TEO_CONFIGURATION_FILES_MODULE_PATH})
 
 # add main contents
 add_subdirectory(share)
+add_subdirectory(scripts)
 
 # export our variables to a TEOConfig.cmake creation
 set(TEO_CONFIGURATION_FILES_LINK_DIRS ${TEO_CONFIGURATION_FILES_LINK_DIRS} ${LIBRARY_OUTPUT_PATH})
