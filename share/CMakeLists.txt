@@ -20,4 +20,5 @@ add_subdirectory(teoBase)
 add_subdirectory(teoSimBase)
 add_subdirectory(teoTools)
 add_subdirectory(yarpmotorgui)
-
+add_subdirectory(launchManipulation)
+add_subdirectory(launchLocomotion)
