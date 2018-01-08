@@ -6,7 +6,7 @@
 find_package(YARP REQUIRED)
 list(APPEND CMAKE_MODULE_PATH ${YARP_MODULE_PATH})
 include(YarpInstallationHelpers)
-#yarp_configure_external_installation(teo-configuration-files)  # Commentig out because not using generated vars
+#yarp_configure_external_installation(teo-configuration-files)  # Commenting out because not using generated vars
 
 yarp_install(PROGRAMS bash/teoSim DESTINATION ${CMAKE_INSTALL_BINDIR})
 
