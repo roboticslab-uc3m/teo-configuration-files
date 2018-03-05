@@ -27,3 +27,11 @@
 *.exe
 *.out
 *.app
+
+# IDE-specific
+/.project
+/.cproject
+
+# Misc
+**/build*/
+/external/
