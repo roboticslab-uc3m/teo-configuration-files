@@ -8,6 +8,11 @@ project(TEO_CONFIGURATION_FILES)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
+find_package(YARP REQUIRED)
+list(APPEND CMAKE_MODULE_PATH ${YARP_MODULE_PATH})
+include(YarpInstallationHelpers)
+yarp_configure_external_installation(teo-configuration-files)
+
 add_subdirectory(share)
 add_subdirectory(scripts)
 
