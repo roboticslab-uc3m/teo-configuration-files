@@ -29,10 +29,4 @@ export(PACKAGE TEO_CONFIGURATION_FILES)
 file(WRITE ${CMAKE_BINARY_DIR}/TEO_CONFIGURATION_FILESConfig.cmake "# Dummy CMake configuration export file.")
 install(FILES ${CMAKE_BINARY_DIR}/TEO_CONFIGURATION_FILESConfig.cmake DESTINATION ${_cmake_destination})
 
-# uninstall target
-configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/template/TEO_CONFIGURATION_FILESConfigUninstall.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/TEO_CONFIGURATION_FILESConfigUninstall.cmake" IMMEDIATE @ONLY)
-
-add_custom_target(uninstall
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/TEO_CONFIGURATION_FILESConfigUninstall.cmake)
+include(AddUninstallTarget)
