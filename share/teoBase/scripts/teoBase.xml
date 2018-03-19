@@ -38,14 +38,14 @@
     </module>
 
     <module>
-        <name>/sbin/runuser</name>
-        <parameters>-l teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition.py"</parameters>
+        <name>su</name>
+        <parameters>- teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition.py"</parameters> -->
         <node>/head</node>
     </module>
 
     <module>
-        <name>/sbin/runuser</name>
-        <parameters>-l teo -c "launchHeadYarp --device Espeak --name /tts"</parameters>
+        <name>su</name>
+        <parameters>- teo -c "yarpdev --device Espeak --name /tts"</parameters>
         <node>/head</node>
     </module>
 
