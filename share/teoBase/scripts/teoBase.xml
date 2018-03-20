@@ -39,7 +39,7 @@
 
     <module>
         <name>su</name>
-        <parameters>- teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition.py"</parameters> -->
+        <parameters>- teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition.py"</parameters>
         <node>/head</node>
     </module>
 
