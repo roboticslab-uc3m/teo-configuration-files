@@ -2,31 +2,47 @@
 # Authors: Juan G. Victores & Raul de Santos Rico
 # CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
-project(TEO_CONFIGURATION_FILES)
+# Define a project.
+project(TEO_CONFIGURATION_FILES LANGUAGES NONE)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+# Find dependencies
+find_package(YCM 0.8 REQUIRED)
 
-find_package(YARP REQUIRED)
-list(APPEND CMAKE_MODULE_PATH ${YARP_MODULE_PATH})
-include(YarpInstallationHelpers)
+# https://github.com/roboticslab-uc3m/questions-and-answers/issues/65
+find_package(YARP 3.0 QUIET)
+if(NOT YARP_FOUND)
+    find_package(YARP 2.3.70 REQUIRED)
+endif()
+
+# Set some useful variables - paths relative to the installation prefix.
 yarp_configure_external_installation(teo-configuration-files)
 
+# Traverse subdirectories.
 add_subdirectory(share)
 add_subdirectory(scripts)
 
+# Store this package in the user registry.
+export(PACKAGE ${PROJECT_NAME})
+
+# Define CMAKE_INSTALL_<dir> and CMAKE_INSTALL_FULL_<dir> variables.
 include(GNUInstallDirs)
 
-if(WIN32 AND NOT CYGWIN)
-    set(_cmake_destination CMake)
+# Set installation path for CMake files.
+if(WIN32)
+    set(${PROJECT_NAME}_CMAKE_DESTINATION "CMake")
 else()
-    set(_cmake_destination ${CMAKE_INSTALL_LIBDIR}/cmake/TEO_CONFIGURATION_FILES)
+    set(${PROJECT_NAME}_CMAKE_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 endif()
 
-export(PACKAGE TEO_CONFIGURATION_FILES)
+# Create dummy CMake configuration export file.
+file(WRITE ${CMAKE_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+     "# Dummy CMake configuration export file.")
 
-file(WRITE ${CMAKE_BINARY_DIR}/TEO_CONFIGURATION_FILESConfig.cmake "# Dummy CMake configuration export file.")
-install(FILES ${CMAKE_BINARY_DIR}/TEO_CONFIGURATION_FILESConfig.cmake DESTINATION ${_cmake_destination})
+# Install CMake configuration file.
+install(FILES ${CMAKE_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+        DESTINATION ${${PROJECT_NAME}_CMAKE_DESTINATION})
 
+# Add uninstall rule.
 include(AddUninstallTarget)
