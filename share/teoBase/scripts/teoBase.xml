@@ -32,9 +32,10 @@
 <!-- head -->
 
     <module>
-        <name>yarpdev</name>
-        <parameters>--device OpenNI2DeviceServer --depthVideoMode 4 --colorVideoMode 9 --noRGBMirror --noDepthMirror</parameters>
+        <name>OpenNI2DeviceServer</name>
+        <parameters>--depthVideoMode 4 --colorVideoMode 9 --noRGBMirror --noDepthMirror</parameters>
         <node>/head</node>
+        <deployer>yarpdev</deployer>
     </module>
 
     <module>
@@ -52,30 +53,33 @@
 <!-- arms Cartesian Control -->
 
     <module>
-        <name>yarpdev</name>
-        <parameters>--device BasicCartesianControl --name /teo/rightArm/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/rightArmKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/rightArm --remote /teo/rightArm</parameters>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teo/rightArm/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/rightArmKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/rightArm --remote /teo/rightArm</parameters>
         <node>localhost</node>
+        <deployer>yarpdev</deployer>
     </module>
 
     <module>
-        <name>yarpdev</name>
-        <parameters>--device BasicCartesianControl --name /teo/leftArm/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/leftArmKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/leftArm --remote /teo/leftArm</parameters>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teo/leftArm/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/leftArmKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/leftArm --remote /teo/leftArm</parameters>
         <node>localhost</node>
+        <deployer>yarpdev</deployer>
     </module>
 
 <!-- legs Cartesian Control -->
 
     <module>
-        <name>yarpdev</name>
-        <parameters>--device BasicCartesianControl --name /teo/rightLeg/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/rightLegKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/rightLeg --remote /teo/rightLeg</parameters>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teo/rightLeg/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/rightLegKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/rightLeg --remote /teo/rightLeg</parameters>
         <node>localhost</node>
+        <deployer>yarpdev</deployer>
     </module>
 
     <module>
-        <name>yarpdev</name>
-        <parameters>--device BasicCartesianControl --name /teo/leftLeg/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/leftLegKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/leftLeg --remote /teo/leftLeg</parameters>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teo/leftLeg/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/leftLegKinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/leftLeg --remote /teo/leftLeg</parameters>
         <node>localhost</node>
+        <deployer>yarpdev</deployer>
     </module>
 
 </application>
-
