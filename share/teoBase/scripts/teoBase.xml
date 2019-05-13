@@ -32,10 +32,9 @@
 <!-- head -->
 
     <module>
-        <name>OpenNI2DeviceServer</name>
-        <parameters>--depthVideoMode 4 --colorVideoMode 9 --noRGBMirror --noDepthMirror</parameters>
+        <name>yarpdev</name>
+        <parameters>--context sensors --from xtion.ini</parameters>
         <node>/head</node>
-        <deployer>yarpdev</deployer>
     </module>
 
     <module>

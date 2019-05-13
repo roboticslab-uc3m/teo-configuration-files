@@ -4,22 +4,22 @@
     <!-- VISION -->
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/OpenNI2/imageFrame:i</parameters>
+        <parameters>--name /yarpview/xtion/rgbImage:i</parameters>
         <node>localhost</node>
     </module>
     <connection>
-        <from>/OpenNI2/imageFrame:o</from>
-        <to>/yarpview/OpenNI2/imageFrame:i</to>
+        <from>/xtion/rgbImage:o</from>
+        <to>/yarpview/xtion/rgbImage:i</to>
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/OpenNI2/depthFrame:i</parameters>
+        <parameters>--name /yarpview/xtion/depthImage:i</parameters>
         <node>localhost</node>
     </module>
     <connection>
-        <from>/OpenNI2/depthFrame:o</from>
-        <to>/yarpview/OpenNI2/depthFrame:i</to>
+        <from>/xtion/depthImage:o</from>
+        <to>/yarpview/xtion/depthImage:i</to>
     </connection>
 
     <!-- TTS and ASR -->
@@ -147,4 +147,3 @@
     </module>
 
 </application>
-
