@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(TEO_CONFIGURATION_FILES LANGUAGES NONE)
 
 # Find dependencies
-find_package(YCM 0.8 REQUIRED)
+find_package(YCM 0.10 REQUIRED)
 find_package(YARP 3.0 REQUIRED)
 
 # Set some useful variables - paths relative to the installation prefix.
