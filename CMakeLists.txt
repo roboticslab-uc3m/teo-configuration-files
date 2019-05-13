@@ -9,12 +9,7 @@ project(TEO_CONFIGURATION_FILES LANGUAGES NONE)
 
 # Find dependencies
 find_package(YCM 0.8 REQUIRED)
-
-# https://github.com/roboticslab-uc3m/questions-and-answers/issues/65
-find_package(YARP 3.0 QUIET)
-if(NOT YARP_FOUND)
-    find_package(YARP 2.3.70 REQUIRED)
-endif()
+find_package(YARP 3.0 REQUIRED)
 
 # Set some useful variables - paths relative to the installation prefix.
 yarp_configure_external_installation(teo-configuration-files)
