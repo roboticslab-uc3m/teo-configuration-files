@@ -8,5 +8,5 @@
 # - https://github.com/roboticslab-uc3m/teo-openrave-models  (provides teo.robot.xml)
 # - https://github.com/roboticslab-uc3m/openrave-yarp-plugins  (provides OpenraveYarpPluginLoader)
 
-openrave /usr/local/share/teo-openrave-models/contexts/openrave/teo/teo.robot.xml --module OpenraveYarpPluginLoader "open --device controlboardwrapper2 --subdevice YarpOpenraveControlboard --robotIndex 0 --allManipulators"
+openrave /usr/local/share/teo-openrave-models/contexts/openrave/teo/teo_lacqueyFetch.robot.xml --module OpenraveYarpPluginLoader "open --device controlboardwrapper2 --subdevice YarpOpenraveControlboard --robotIndex 0 --allManipulators"
 
