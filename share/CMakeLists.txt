@@ -1,18 +1,15 @@
-# Copyright: UC3M 2017
+# Copyright: UC3M 2019
 # Author: roboticslab, jgvictores, etc
 # CopyPolicy: Released under the terms of the GNU GPL v2.0.
 
-yarp_install(FILES ymanager.ini DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
-yarp_install(FILES yarpmotorgui/teo-yarpmotorgui.ini DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
-yarp_install(FILES yarpmotorgui/teoSim-yarpmotorgui.ini DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
-yarp_install(FILES ../doc/fig/teo-apps-64x64.png DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
+yarp_install(DIRECTORY yarpmanager
+                       yarpmotorgui
+                       ../doc/fig
+             DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
 
-### Go through single applications
+yarp_install(DIRECTORY kinematics
+                       launch
+             DESTINATION ${TEO-CONFIGURATION-FILES_CONTEXTS_INSTALL_DIR})
 
-add_subdirectory(kinematics)
-add_subdirectory(teoBase)
-add_subdirectory(teoSimBase)
-add_subdirectory(teoTools)
-add_subdirectory(yarpmotorgui)
-add_subdirectory(launchManipulation)
-add_subdirectory(launchLocomotion)
+yarp_install(DIRECTORY teo
+             DESTINATION ${TEO-CONFIGURATION-FILES_ROBOTS_INSTALL_DIR})
