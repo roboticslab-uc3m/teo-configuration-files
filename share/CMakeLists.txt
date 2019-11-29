@@ -1,7 +1,3 @@
-# Copyright: UC3M 2019
-# Author: roboticslab, jgvictores, etc
-# CopyPolicy: Released under the terms of the GNU GPL v2.0.
-
 yarp_install(DIRECTORY applications/yarpmanager
                        applications/yarpmotorgui
                        ../doc/fig
