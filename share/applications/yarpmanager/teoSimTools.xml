@@ -39,7 +39,7 @@
 
     <module>
         <name>yarpmotorgui</name>
-        <parameters>--from /usr/local/share/teo-configuration-files/applications/teoSim-yarpmotorgui.ini</parameters>
+        <parameters>--from applications/yarpmotorgui/teoSim.ini</parameters>
     </module>
 
 </application>
