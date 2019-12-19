@@ -6,6 +6,8 @@
         <node>localhost</node>
     </module>
 
+<!-- arms Cartesian Control -->
+
     <module>
         <name>BasicCartesianControl</name>
         <parameters>--name /teoSim/rightArm/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/fixedTrunk-rightArm-fetch-kinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/rightArm --remote /teoSim/rightArm</parameters>
@@ -48,49 +50,6 @@
         <parameters>--name /teoSim/leftLeg/CartesianControl --from /usr/local/share/teo-configuration-files/contexts/kinematics/leftLeg-kinematics.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/leftLeg --remote /teoSim/leftLeg</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
-    </module>
-
-    <!-- TOOLS -->
-
-    <module>
-        <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /teoSim/rightArm/rpc:i"</parameters>
-        <node>localhost</node>
-    </module>
-
-    <module>
-        <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /teoSim/leftArm/rpc:i"</parameters>
-        <node>localhost</node>
-    </module>
-
-    <module>
-        <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /teoSim/trunk/rpc:i"</parameters>
-        <node>localhost</node>
-    </module>
-
-    <module>
-        <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /teoSim/head/rpc:i"</parameters>
-        <node>localhost</node>
-    </module>
-
-    <module>
-        <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /teoSim/leftLeg/rpc:i"</parameters>
-        <node>localhost</node>
-    </module>
-
-    <module>
-        <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /teoSim/rightLeg/rpc:i"</parameters>
-        <node>localhost</node>
-    </module>
-
-    <module>
-        <name>yarpmotorgui</name>
-        <parameters>--from /usr/local/share/teo-configuration-files/applications/teoSim-yarpmotorgui.ini</parameters>
     </module>
 
 </application>
