@@ -1,0 +1,57 @@
+<application>
+    <name>teoSimTools App</name>
+
+    <!-- VISION -->
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /yarpview/teoSim/depthImage:i</parameters>
+        <node>localhost</node>
+    </module>
+    <connection>
+        <from>/teoSim/depthImage:o</from>
+        <to>/yarpview/teoSim/depthImage:i</to>
+    </connection>
+
+    <!-- JOINT -->
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/rightArm/rpc:i"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/leftArm/rpc:i"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/trunk/rpc:i"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/head/rpc:i"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/leftLeg/rpc:i"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/rightLeg/rpc:i"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>yarpmotorgui</name>
+        <parameters>--from applications/yarpmotorgui/teoSim.ini</parameters>
+    </module>
+
+</application>

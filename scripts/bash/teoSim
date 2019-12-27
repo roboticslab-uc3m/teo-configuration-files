@@ -14,4 +14,4 @@ if [ $# -eq 1 ]; then
     fileName="teo_$1.robot.xml"
 fi
 
-openrave /usr/local/share/teo-openrave-models/contexts/openrave/$fileName --module OpenraveYarpPluginLoader "open --device controlboardwrapper2 --subdevice YarpOpenraveControlboard --robotIndex 0 --allManipulators"
+openrave --module OpenraveYarpPluginLoader "env openrave/$fileName open --device controlboardwrapper2 --subdevice YarpOpenraveControlboard --robotIndex 0 --allManipulators" --viewer qtcoin --collision ode
