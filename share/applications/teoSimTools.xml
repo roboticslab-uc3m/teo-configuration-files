@@ -51,7 +51,7 @@
 
     <module>
         <name>yarpmotorgui</name>
-        <parameters>--from applications/yarpmotorgui/teoSim.ini</parameters>
+        <parameters>--from yarpmotorgui/teoSim.ini</parameters>
     </module>
 
 </application>
