@@ -10,6 +10,7 @@
     <connection>
         <from>/xtion/rgbImage:o</from>
         <to>/yarpview/xtion/rgbImage:i</to>
+        <protocol>mjpeg</protocol>
     </connection>
 
     <module>
@@ -20,6 +21,7 @@
     <connection>
         <from>/xtion/depthImage:o</from>
         <to>/yarpview/xtion/depthImage:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
     </connection>
 
     <!-- TTS and ASR -->

@@ -10,6 +10,7 @@
     <connection>
         <from>/teoSim/depthImage:o</from>
         <to>/yarpview/teoSim/depthImage:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
     </connection>
 
     <!-- JOINT -->
