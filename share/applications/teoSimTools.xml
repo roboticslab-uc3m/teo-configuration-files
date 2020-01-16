@@ -30,12 +30,12 @@
     <module>
         <name>yarpscope</name>
         <parameters>--index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/ft1/yarpscope</prefix>
+        <prefix>/ft1</prefix>
         <node>localhost</node>
     </module>
     <connection>
         <from>/teoSim/measures:o</from>
-        <to>/ft1</to>
+        <to>/ft1/yarpscope</to>
         <protocol>tcp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.1+subsubindex.0</protocol>
     </connection>
 
