@@ -2,6 +2,7 @@ yarp_install(FILES applications/ymanager.ini
                    applications/teoBase.xml
                    applications/teoSimBase.xml
                    applications/teoSimTools.xml
+                   applications/teoSimWorld.xml
                    applications/teoTools.xml
              DESTINATION ${TEO-CONFIGURATION-FILES_APPLICATIONS_INSTALL_DIR})
 
