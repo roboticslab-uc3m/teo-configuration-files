@@ -1,0 +1,11 @@
+<application>
+    <name>teoSimWorld App</name>
+
+<!-- Ironing -->
+    <module>
+        <name>openraveYarpWorldClient</name>
+        <parameters>--file openrave/ironing/ironing_table.stl --pos 0.5 0 -0.85</parameters>
+        <node>localhost</node>
+    </module>
+
+</application>
