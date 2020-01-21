@@ -7,6 +7,20 @@
     </module>
 
     <module>
+        <name>RealToSimControlboard</name>
+        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/leftLacqueyFetch</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>RealToSimControlboard</name>
+        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/rightLacqueyFetch</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
         <name>openraveYarpPluginLoaderClient</name>
         <parameters>--device RGBDSensorWrapper --subdevice YarpOpenraveRGBDSensor --robotIndex 0 --depthSensorIndex 0</parameters>
         <node>localhost</node>
