@@ -8,14 +8,14 @@
 
     <module>
         <name>RealToSimControlboard</name>
-        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/leftLacqueyFetch</parameters>
+        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/leftHand --remotePrefix /teoSim/leftLacqueyFetch</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>RealToSimControlboard</name>
-        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/rightLacqueyFetch</parameters>
+        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/rightHand --remotePrefix /teoSim/rightLacqueyFetch</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
