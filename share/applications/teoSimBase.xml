@@ -1,0 +1,81 @@
+<application>
+    <name>teoSimBase App</name>
+
+    <module>
+        <name>teoSim</name>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>RealToSimControlboard</name>
+        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/leftHand --remotePrefix /teoSim/leftLacqueyFetch</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>RealToSimControlboard</name>
+        <parameters>--context RealToSimControlboard --from lacqueyFetch.ini --name /teoSim/rightHand --remotePrefix /teoSim/rightLacqueyFetch</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>openraveYarpPluginLoaderClient</name>
+        <parameters>--device RGBDSensorWrapper --subdevice YarpOpenraveRGBDSensor --robotIndex 0 --depthSensorIndex 0</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>openraveYarpPluginLoaderClient</name>
+        <parameters>--device multipleanalogsensorsserver --subdevice YarpOpenraveAnalogSensors --robotIndex 0 --ftSensorIndices 1 2 --period 50</parameters>
+        <node>localhost</node>
+    </module>
+
+<!-- arms Cartesian Control -->
+
+    <module>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teoSim/rightArm/CartesianControl --kinematics teo-fixedTrunk-rightArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/rightArm --remote /teoSim/rightArm</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teoSim/trunkAndRightArm/CartesianControl --kinematics teo-trunk-rightArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/trunkAndRightArm --remote /teoSim/trunkAndRightArm</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teoSim/leftArm/CartesianControl --kinematics teo-fixedTrunk-leftArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/leftArm --remote /teoSim/leftArm</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teoSim/trunkAndLeftArm/CartesianControl --kinematics teo-trunk-leftArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/trunkAndLeftArm --remote /teoSim/trunkAndLeftArm</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+<!-- legs Cartesian Control -->
+
+    <module>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teoSim/rightLeg/CartesianControl --kinematics teo-rightLeg.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/rightLeg --remote /teoSim/rightLeg</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+    <module>
+        <name>BasicCartesianControl</name>
+        <parameters>--name /teoSim/leftLeg/CartesianControl --kinematics teo-leftLeg.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teoSim/leftLeg --remote /teoSim/leftLeg</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
+    </module>
+
+</application>

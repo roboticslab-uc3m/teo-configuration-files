@@ -5,5 +5,5 @@ MimeType=application/vnd.ms-htmlhelp;
 Exec=yarpmanager
 NoDisplay=true
 StartupNotify=true
-Icon=/usr/local/share/teo-configuration-files/applications/teo-apps-64x64.png
+Icon=/usr/local/share/teo-configuration-files/fig/teo-apps-64x64.png
 Path=/usr/local/share/teo-configuration-files/applications

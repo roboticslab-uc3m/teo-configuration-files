@@ -1,12 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Authors: see AUTHORS.md at project root.
 # CopyPolicy: released under the terms of the LGPLv2.1, see LICENSE at project root.
 # URL: https://github.com/roboticslab-uc3m/teo-configuration-files
 
 # Dependencies:
-# - https://github.com/roboticslab-uc3m/teo-openrave-models  (provides teo.robot.xml)
-# - https://github.com/roboticslab-uc3m/openrave-yarp-plugins  (provides OpenraveYarpPluginLoader)
+# - https://github.com/roboticslab-uc3m/teo-openrave-models  (provides `teo_lacqueyFetch.robot.xml`)
+# - https://github.com/roboticslab-uc3m/openrave-yarp-plugins  (provides `OpenraveYarpPluginLoader` and `YarpOpenraveControlboard`)
 
-openrave /usr/local/share/teo-openrave-models/contexts/openrave/teo/teo.robot.xml --module OpenraveYarpPluginLoader "open --device controlboardwrapper2 --subdevice YarpOpenraveControlboard --robotIndex 0 --allManipulators"
+fileName="teo_lacqueyFetch.robot.xml"
 
+if [ $# -eq 1 ]; then
+    fileName="teo_$1.robot.xml"
+fi
+
+openrave --module OpenraveYarpPluginLoader "env openrave/$fileName open --device controlboardwrapper2 --subdevice YarpOpenraveControlboard --robotIndex 0 --allManipulators" --module OpenraveYarpWorld --module OpenraveYarpPlanner --viewer qtcoin --collision ode
