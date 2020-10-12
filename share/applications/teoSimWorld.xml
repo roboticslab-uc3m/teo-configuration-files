@@ -39,4 +39,10 @@
         <node>localhost</node>
     </module>
 
+    <module>
+        <name>openraveYarpWorldClient</name>
+        <parameters>--file data/mug1.kinbody.xml --pos 0.5 0 0.8 --ori 1 0 0 45</parameters>
+        <node>localhost</node>
+    </module>
+
 </application>
