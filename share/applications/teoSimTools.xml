@@ -13,29 +13,50 @@
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
     </connection>
 
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /yarpview/teoSim/rgbImage:i</parameters>
+        <node>localhost</node>
+    </module>
+    <connection>
+        <from>/teoSim/rgbImage:o</from>
+        <to>/yarpview/teoSim/rgbImage:i</to>
+        <!--protocol></protocol-->
+    </connection>
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /yarpview/teoSim/depthImage2:i</parameters>
+        <node>localhost</node>
+    </module>
+    <connection>
+        <from>/teoSim/depthImage:o</from>
+        <to>/yarpview/teoSim/depthImage2:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage2</protocol>
+    </connection>
 
     <!-- FORCE -->
     <module>
         <name>yarpscope</name>
         <parameters>--index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 0 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/ft0</prefix>
+        <prefix>/teoSim/ft0</prefix>
         <node>localhost</node>
     </module>
     <connection>
         <from>/teoSim/measures:o</from>
-        <to>/ft0/yarpscope</to>
+        <to>/teoSim/ft0/yarpscope</to>
         <protocol>tcp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.0+subsubindex.0</protocol>
     </connection>
 
     <module>
         <name>yarpscope</name>
         <parameters>--index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/ft1</prefix>
+        <prefix>/teoSim/ft1</prefix>
         <node>localhost</node>
     </module>
     <connection>
         <from>/teoSim/measures:o</from>
-        <to>/ft1/yarpscope</to>
+        <to>/teoSim/ft1/yarpscope</to>
         <protocol>tcp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.1+subsubindex.0</protocol>
     </connection>
 
