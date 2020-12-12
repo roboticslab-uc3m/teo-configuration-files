@@ -4,17 +4,6 @@
     <!-- VISION -->
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teoSim/depthImage:i</parameters>
-        <node>localhost</node>
-    </module>
-    <connection>
-        <from>/teoSim/depthImage:o</from>
-        <to>/yarpview/teoSim/depthImage:i</to>
-        <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
-    </connection>
-
-    <module>
-        <name>yarpview</name>
         <parameters>--name /yarpview/teoSim/rgbImage:i</parameters>
         <node>localhost</node>
     </module>
@@ -22,6 +11,17 @@
         <from>/teoSim/rgbImage:o</from>
         <to>/yarpview/teoSim/rgbImage:i</to>
         <!--protocol></protocol-->
+    </connection>
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /yarpview/teoSim/depthImage:i</parameters>
+        <node>localhost</node>
+    </module>
+    <connection>
+        <from>/teoSim/depthImage:o</from>
+        <to>/yarpview/teoSim/depthImage:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
     </connection>
 
     <module>
@@ -34,6 +34,25 @@
         <to>/yarpview/teoSim/depthImage2:i</to>
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage2</protocol>
     </connection>
+
+    <!-- TTS and ASR -->
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/tts/rpc:s"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp read ... /teoSim/speechRecognition:o"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/speechRecognition/rpc:s"</parameters>
+        <node>localhost</node>
+    </module>
 
     <!-- FORCE -->
     <module>
@@ -97,6 +116,7 @@
         <node>localhost</node>
     </module>
 
+    <!-- MOTORS -->
     <module>
         <name>yarpmotorgui</name>
         <parameters>--from yarpmotorgui/teoSim.ini</parameters>

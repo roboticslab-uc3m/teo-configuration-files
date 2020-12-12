@@ -39,11 +39,12 @@
     <module>
         <name>speechRecognition.py</name>
         <node>localhost</node>
+        <prefix>/teoSim</prefix>
     </module>
 
     <module>
         <name>Espeak</name>
-        <parameters>--name /tts</parameters>
+        <parameters>--name /teoSim/tts</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
