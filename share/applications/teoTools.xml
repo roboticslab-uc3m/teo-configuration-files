@@ -4,79 +4,90 @@
     <!-- VISION -->
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/xtion/rgbImage:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/rgbImage:i</parameters>
         <node>localhost</node>
     </module>
     <connection>
-        <from>/xtion/rgbImage:o</from>
-        <to>/yarpview/xtion/rgbImage:i</to>
+        <from>/teo/xtion/rgbImage:o</from>
+        <to>/yarpview/teo/xtion/rgbImage:i</to>
         <protocol>mjpeg</protocol>
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/xtion/depthImage:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/depthImage:i</parameters>
         <node>localhost</node>
     </module>
     <connection>
-        <from>/xtion/depthImage:o</from>
-        <to>/yarpview/xtion/depthImage:i</to>
+        <from>/teo/xtion/depthImage:o</from>
+        <to>/yarpview/teo/xtion/depthImage:i</to>
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
+    </connection>
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /yarpview/teo/xtion/depthImage2:i</parameters>
+        <node>localhost</node>
+    </module>
+    <connection>
+        <from>/teo/xtion/depthImage:o</from>
+        <to>/yarpview/teo/xtion/depthImage2:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage2</protocol>
     </connection>
 
     <!-- TTS and ASR -->
     <module>
         <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /tts/rpc:s"</parameters>
+        <parameters>-e "yarp rpc /teo/tts/rpc:s"</parameters>
         <node>localhost</node>
     </module>
 
     <module>
         <name>gnome-terminal</name>
-        <parameters>-e "yarp read ... /speechRecognition:o"</parameters>
+        <parameters>-e "yarp read ... /teo/speechRecognition:o"</parameters>
         <node>localhost</node>
     </module>
 
     <module>
         <name>gnome-terminal</name>
-        <parameters>-e "yarp rpc /speechRecognition/rpc:s"</parameters>
+        <parameters>-e "yarp rpc /teo/speechRecognition/rpc:s"</parameters>
         <node>localhost</node>
     </module>
 
     <!-- FORCE -->
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /jr3/ch0:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/jr3/ch0:o</prefix>
+        <parameters>--remote /teo/jr3/ch0:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teo/jr3/ch0:o</prefix>
         <node>localhost</node>
     </module>
 
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /jr3/ch1:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/jr3/ch1:o</prefix>
+        <parameters>--remote /teo/jr3/ch1:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teo/jr3/ch1:o</prefix>
         <node>localhost</node>
     </module>
 
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /jr3/ch2:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 0 --dx 640 --dy 512</parameters>
-        <prefix>/jr3/ch2:o</prefix>
+        <parameters>--remote /teo/jr3/ch2:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/jr3/ch2:o</prefix>
         <node>localhost</node>
     </module>
 
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /jr3/ch3:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 0 --dx 640 --dy 512</parameters>
-        <prefix>/jr3/ch3:o</prefix>
+        <parameters>--remote /teo/jr3/ch3:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/jr3/ch3:o</prefix>
         <node>localhost</node>
     </module>
 
     <!-- INERTIAL -->
         <module>
         <name>yarpscope</name>
-        <parameters>--remote /inertial --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
-        <prefix>/jr3/ch2:o</prefix>
+        <parameters>--remote /teo/inertial --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/inertial</prefix>
         <node>localhost</node>
     </module>
 

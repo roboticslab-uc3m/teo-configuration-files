@@ -11,7 +11,7 @@
 
     <module>
         <name>yarpdev</name>
-        <parameters>--device Jr3 --period 20 --name /jr3  --ports "(ch0:o ch1:o ch2:o ch3:o)" --channels 24 --ch0:o 0 5 0 5 --ch1:o 6 11 0 5 --ch2:o 12 17 0 5 --ch3:o 18 23 0 5</parameters>
+        <parameters>--device Jr3 --period 20 --name /teo/jr3  --ports "(ch0:o ch1:o ch2:o ch3:o)" --channels 24 --ch0:o 0 5 0 5 --ch1:o 6 11 0 5 --ch2:o 12 17 0 5 --ch3:o 18 23 0 5</parameters>
         <node>/manipulation</node>
     </module>
 
@@ -25,7 +25,7 @@
 
     <module>
         <name>yarpdev</name>
-        <parameters>--subdevice xsensmtx --device inertial --name /inertial</parameters>
+        <parameters>--subdevice xsensmtx --device inertial --name /teo/inertial</parameters>
         <node>/locomotion</node>
     </module>
 
@@ -33,7 +33,7 @@
 
     <module>
         <name>yarpdev</name>
-        <parameters>--context sensors --from asus-xtion.ini</parameters>
+        <parameters>--context sensors --from asus-xtion.ini --name /teo/xtion</parameters>
         <node>/head</node>
     </module>
 
@@ -41,11 +41,12 @@
         <name>su</name>
         <parameters>- teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition.py"</parameters>
         <node>/head</node>
+        <prefix>/teo</prefix>
     </module>
 
     <module>
         <name>su</name>
-        <parameters>- teo -c "yarpdev --device Espeak --name /tts"</parameters>
+        <parameters>- teo -c "yarpdev --device Espeak --name /teo/tts"</parameters>
         <node>/head</node>
     </module>
 
