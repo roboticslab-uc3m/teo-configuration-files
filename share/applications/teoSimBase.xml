@@ -37,6 +37,12 @@
     </module>
 
     <module>
+        <name>openraveYarpPluginLoaderClient</name>
+        <parameters>--device YarpOpenraveMeshFromRealDepth --robotIndex 0 --depthSensorIndex 0 --remote /xtion</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
         <name>speechRecognition.py</name>
         <node>localhost</node>
         <prefix>/teoSim</prefix>

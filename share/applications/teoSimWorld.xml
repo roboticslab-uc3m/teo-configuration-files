@@ -2,46 +2,52 @@
     <name>teoSimWorld App</name>
 
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file openrave/floor.kinbody.xml --pos -0.00104 -0.00001 -0.88</parameters>
         <node>localhost</node>
     </module>
 
 <!-- Ironing -->
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file openrave/ironing/ironing_table.stl --pos 0.5 0 -0.85</parameters>
         <node>localhost</node>
     </module>
 
 <!-- Grasping -->
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file openrave/grasping/table.kinbody.xml --pos 0.7 0.0 -0.45</parameters>
         <node>localhost</node>
     </module>
 
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file openrave/grasping/bottle.kinbody.xml --pos 0.50940 -0.17243 0.117</parameters>
         <node>localhost</node>
     </module>
 
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file openrave/grasping/tool.kinbody.xml --pos 0.60940 0.22757 0.017 --ori 0 0 1 45</parameters>
         <node>localhost</node>
     </module>
 
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file openrave/grasping/box.kinbody.xml --pos 0.50940 0.02757 0.037 --ori 0 0 1 45</parameters>
         <node>localhost</node>
     </module>
 
     <module>
-        <name>openraveYarpWorldClient</name>
+        <name>openraveYarpWorldClientFile</name>
         <parameters>--file data/mug1.kinbody.xml --pos 0.5 0 0.8 --ori 1 0 0 45</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>openraveYarpWorldClientMesh</name>
+        <parameters>--robot teoSim --sensor xtion --remote /xtion</parameters>
         <node>localhost</node>
     </module>
 
