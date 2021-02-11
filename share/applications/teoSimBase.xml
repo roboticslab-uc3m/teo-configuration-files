@@ -1,6 +1,8 @@
 <application>
     <name>teoSimBase App</name>
 
+<!-- manipulation and locomotion -->
+
     <module>
         <name>teoSim</name>
         <node>localhost</node>
@@ -22,14 +24,35 @@
 
     <module>
         <name>openraveYarpPluginLoaderClient</name>
+        <parameters>--device multipleanalogsensorsserver --subdevice YarpOpenraveAnalogSensors --robotIndex 0 --ftSensorIndices 1 2 --period 50</parameters>
+        <node>localhost</node>
+    </module>
+
+<!-- head -->
+
+    <module>
+        <name>openraveYarpPluginLoaderClient</name>
         <parameters>--device RGBDSensorWrapper --subdevice YarpOpenraveRGBDSensor --robotIndex 0 --depthSensorIndex 0</parameters>
         <node>localhost</node>
     </module>
 
     <module>
         <name>openraveYarpPluginLoaderClient</name>
-        <parameters>--device multipleanalogsensorsserver --subdevice YarpOpenraveAnalogSensors --robotIndex 0 --ftSensorIndices 1 2 --period 50</parameters>
+        <parameters>--device YarpOpenraveMeshFromRealDepth --robotIndex 0 --depthSensorIndex 0 --remote /xtion</parameters>
         <node>localhost</node>
+    </module>
+
+    <module>
+        <name>speechRecognition.py</name>
+        <node>localhost</node>
+        <prefix>/teoSim</prefix>
+    </module>
+
+    <module>
+        <name>Espeak</name>
+        <parameters>--name /teoSim/tts</parameters>
+        <node>localhost</node>
+        <deployer>yarpdev</deployer>
     </module>
 
 <!-- arms Cartesian Control -->
