@@ -49,10 +49,9 @@
     </module>
 
     <module>
-        <name>Espeak</name>
+        <name>espeakServer</name>
         <parameters>--name /teoSim/tts</parameters>
         <node>localhost</node>
-        <deployer>yarpdev</deployer>
     </module>
 
 <!-- arms Cartesian Control -->

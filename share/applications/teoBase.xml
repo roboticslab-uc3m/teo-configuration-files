@@ -46,7 +46,7 @@
 
     <module>
         <name>su</name>
-        <parameters>- teo -c "yarpdev --device Espeak --name /teo/tts"</parameters>
+        <parameters>- teo -c "espeakServer --name /teo/tts"</parameters>
         <node>/head</node>
     </module>
 
