@@ -21,7 +21,7 @@
     <connection>
         <from>/teo/xtion/depthImage:o</from>
         <to>/yarpview/teo/xtion/depthImage:i</to>
-        <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_mono</protocol>
     </connection>
 
     <module>
@@ -32,7 +32,7 @@
     <connection>
         <from>/teo/xtion/depthImage:o</from>
         <to>/yarpview/teo/xtion/depthImage2:i</to>
-        <protocol>udp+recv.portmonitor+type.dll+file.depthimage2</protocol>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_rgb</protocol>
     </connection>
 
     <!-- TTS and ASR -->
