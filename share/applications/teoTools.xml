@@ -7,6 +7,7 @@
         <parameters>--name /yarpview/teo/xtion/rgbImage:i</parameters>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teo/xtion/rgbImage:o</from>
         <to>/yarpview/teo/xtion/rgbImage:i</to>
@@ -15,23 +16,25 @@
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teo/xtion/depthImage:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/depthImageMono:i</parameters>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teo/xtion/depthImage:o</from>
-        <to>/yarpview/teo/xtion/depthImage:i</to>
+        <to>/yarpview/teo/xtion/depthImageMono:i</to>
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_mono</protocol>
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teo/xtion/depthImage2:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/depthImageRGB:i</parameters>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teo/xtion/depthImage:o</from>
-        <to>/yarpview/teo/xtion/depthImage2:i</to>
+        <to>/yarpview/teo/xtion/depthImageRGB:i</to>
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_rgb</protocol>
     </connection>
 
@@ -84,7 +87,7 @@
     </module>
 
     <!-- INERTIAL -->
-        <module>
+    <module>
         <name>yarpscope</name>
         <parameters>--remote /teo/inertial --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
         <prefix>/teo/inertial</prefix>

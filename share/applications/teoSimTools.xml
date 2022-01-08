@@ -7,32 +7,35 @@
         <parameters>--name /yarpview/teoSim/rgbImage:i</parameters>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teoSim/rgbImage:o</from>
         <to>/yarpview/teoSim/rgbImage:i</to>
-        <!--protocol></protocol-->
+        <!-- protocol? -->
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teoSim/depthImage:i</parameters>
+        <parameters>--name /yarpview/teoSim/depthImageMono:i</parameters>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teoSim/depthImage:o</from>
-        <to>/yarpview/teoSim/depthImage:i</to>
-        <protocol>udp+recv.portmonitor+type.dll+file.depthimage</protocol>
+        <to>/yarpview/teoSim/depthImageMono:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_mono</protocol>
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teoSim/depthImage2:i</parameters>
+        <parameters>--name /yarpview/teoSim/depthImageRGB:i</parameters>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teoSim/depthImage:o</from>
-        <to>/yarpview/teoSim/depthImage2:i</to>
-        <protocol>udp+recv.portmonitor+type.dll+file.depthimage2</protocol>
+        <to>/yarpview/teoSim/depthImageRGB:i</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_rgb</protocol>
     </connection>
 
     <!-- TTS and ASR -->
@@ -61,6 +64,7 @@
         <prefix>/teoSim/ft0</prefix>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teoSim/measures:o</from>
         <to>/teoSim/ft0/yarpscope</to>
@@ -73,6 +77,7 @@
         <prefix>/teoSim/ft1</prefix>
         <node>localhost</node>
     </module>
+
     <connection>
         <from>/teoSim/measures:o</from>
         <to>/teoSim/ft1/yarpscope</to>

@@ -1,31 +1,31 @@
 <application>
-<name>teoBase App</name>
+    <name>teoBase App</name>
 
 <!-- manipulation -->
 
     <module>
-        <name>launchManipulation</name>
-        <parameters>--externalEncoderWait 1</parameters>
+        <name>launchCanBus</name>
+        <parameters>--from manipulation-lacquey.ini</parameters>
         <node>/manipulation</node>
     </module>
 
     <module>
         <name>yarpdev</name>
-        <parameters>--device Jr3 --period 20 --name /teo/jr3  --ports "(ch0:o ch1:o ch2:o ch3:o)" --channels 24 --ch0:o 0 5 0 5 --ch1:o 6 11 0 5 --ch2:o 12 17 0 5 --ch3:o 18 23 0 5</parameters>
+        <parameters>--device Jr3 --period 20 --name /jr3  --ports "(ch0:o ch1:o ch2:o ch3:o)" --channels 24 --ch0:o 0 5 0 5 --ch1:o 6 11 0 5 --ch2:o 12 17 0 5 --ch3:o 18 23 0 5</parameters>
         <node>/manipulation</node>
     </module>
 
 <!-- locomotion -->
 
     <module>
-        <name>launchLocomotion</name>
-        <parameters>--externalEncoderWait 1</parameters>
+        <name>launchCanBus</name>
+        <parameters>--from locomotion.ini</parameters>
         <node>/locomotion</node>
     </module>
 
     <module>
         <name>yarpdev</name>
-        <parameters>--subdevice xsensmtx --device inertial --name /teo/inertial</parameters>
+        <parameters>--subdevice xsensmtx --device inertial --name /inertial</parameters>
         <node>/locomotion</node>
     </module>
 
@@ -33,20 +33,19 @@
 
     <module>
         <name>yarpdev</name>
-        <parameters>--context sensors --from asus-xtion.ini --name /teo/xtion</parameters>
+        <parameters>--context sensors --from asus-xtion.ini --name /xtion</parameters>
         <node>/head</node>
     </module>
 
     <module>
         <name>su</name>
-        <parameters>- teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition.py"</parameters>
+        <parameters>- teo -c "GST_PLUGIN_PATH=/usr/local/lib/gstreamer-1.0 speechRecognition"</parameters>
         <node>/head</node>
-        <prefix>/teo</prefix>
     </module>
 
     <module>
         <name>su</name>
-        <parameters>- teo -c "espeakServer --name /teo/tts"</parameters>
+        <parameters>- teo -c "espeakServer --name /tts"</parameters>
         <node>/head</node>
     </module>
 
@@ -54,28 +53,28 @@
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/rightArm/CartesianControl --kinematics teo-fixedTrunk-rightArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/rightArm --remote /teo/rightArm</parameters>
+        <parameters>--name /rightArm/CartesianControl --kinematics teo-fixedTrunk-rightArm-fetch.ini --angleRepr axisAngle --local /BasicCartesianControl/teo/rightArm --remote /teo/rightArm</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/trunkAndRightArm/CartesianControl --kinematics teo-trunk-rightArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/trunkAndRightArm --remote /teo/trunkAndRightArm</parameters>
+        <parameters>--name /teo/trunkAndRightArm/CartesianControl --kinematics teo-trunk-rightArm-fetch.ini --angleRepr axisAngle --local /BasicCartesianControl/teo/trunkAndRightArm --remote /teo/trunkAndRightArm</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/leftArm/CartesianControl --kinematics teo-fixedTrunk-leftArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/leftArm --remote /teo/leftArm</parameters>
+        <parameters>--name /teo/leftArm/CartesianControl --kinematics teo-fixedTrunk-leftArm-fetch.ini --angleRepr axisAngle --local /BasicCartesianControl/teo/leftArm --remote /teo/leftArm</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/trunkAndLeftArm/CartesianControl --kinematics teo-trunk-leftArm-fetch.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/trunkAndLeftArm --remote /teo/trunkAndLeftArm</parameters>
+        <parameters>--name /teo/trunkAndLeftArm/CartesianControl --kinematics teo-trunk-leftArm-fetch.ini --angleRepr axisAngle --local /BasicCartesianControl/teo/trunkAndLeftArm --remote /teo/trunkAndLeftArm</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
@@ -84,14 +83,14 @@
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/rightLeg/CartesianControl --kinematics teo-rightLeg.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/rightLeg --remote /teo/rightLeg</parameters>
+        <parameters>--name /teo/rightLeg/CartesianControl --kinematics teo-rightLeg.ini --angleRepr axisAngle --local /BasicCartesianControl/teo/rightLeg --remote /teo/rightLeg</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/leftLeg/CartesianControl --kinematics teo-leftLeg.ini --angleRepr axisAngle --robot remote_controlboard --local /BasicCartesianControl/teo/leftLeg --remote /teo/leftLeg</parameters>
+        <parameters>--name /teo/leftLeg/CartesianControl --kinematics teo-leftLeg.ini --angleRepr axisAngle --local /BasicCartesianControl/teo/leftLeg --remote /teo/leftLeg</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
