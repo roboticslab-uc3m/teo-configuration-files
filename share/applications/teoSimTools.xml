@@ -4,36 +4,36 @@
     <!-- VISION -->
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teoSim/rgbImage:i</parameters>
+        <parameters>--name /yarpview/teoSim/rgbImage:i --title "RGB"</parameters>
         <node>localhost</node>
     </module>
 
     <connection>
-        <from>/teoSim/rgbImage:o</from>
+        <from>/teoSim/camera/rgbImage:o</from>
         <to>/yarpview/teoSim/rgbImage:i</to>
         <!-- protocol? -->
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teoSim/depthImageMono:i</parameters>
+        <parameters>--name /yarpview/teoSim/depthImageMono:i --title "Depth mono"</parameters>
         <node>localhost</node>
     </module>
 
     <connection>
-        <from>/teoSim/depthImage:o</from>
+        <from>/teoSim/camera/depthImage:o</from>
         <to>/yarpview/teoSim/depthImageMono:i</to>
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_mono</protocol>
     </connection>
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teoSim/depthImageRGB:i</parameters>
+        <parameters>--name /yarpview/teoSim/depthImageRGB:i --title "Depth RGB"</parameters>
         <node>localhost</node>
     </module>
 
     <connection>
-        <from>/teoSim/depthImage:o</from>
+        <from>/teoSim/camera/depthImage:o</from>
         <to>/yarpview/teoSim/depthImageRGB:i</to>
         <protocol>udp+recv.portmonitor+type.dll+file.depthimage_to_rgb</protocol>
     </connection>
@@ -60,28 +60,94 @@
     <!-- FORCE -->
     <module>
         <name>yarpscope</name>
-        <parameters>--index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 0 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/teoSim/ft0</prefix>
+        <parameters>--title "Right leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 0 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/forceTorque/rightLeg</prefix>
         <node>localhost</node>
     </module>
 
     <connection>
-        <from>/teoSim/measures:o</from>
-        <to>/teoSim/ft0/yarpscope</to>
-        <protocol>tcp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.0+subsubindex.0</protocol>
+        <from>/teoSim/forceTorque/measures:o</from>
+        <to>/teoSim/forceTorque/rightLeg/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.0+subsubindex.0</protocol>
     </connection>
 
     <module>
         <name>yarpscope</name>
-        <parameters>--index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/teoSim/ft1</prefix>
+        <parameters>--title "Left leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/forceTorque/leftLeg</prefix>
         <node>localhost</node>
     </module>
 
     <connection>
-        <from>/teoSim/measures:o</from>
-        <to>/teoSim/ft1/yarpscope</to>
-        <protocol>tcp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.1+subsubindex.0</protocol>
+        <from>/teoSim/forceTorque/measures:o</from>
+        <to>/teoSim/forceTorque/leftLeg/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.1+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "Right arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/forceTorque/rightArm</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teoSim/forceTorque/measures:o</from>
+        <to>/teoSim/forceTorque/rightArm/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.2+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "Left arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/forceTorque/leftArm</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teoSim/forceTorque/measures:o</from>
+        <to>/teoSim/forceTorque/leftArm/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.3+subsubindex.0</protocol>
+    </connection>
+
+    <!-- INERTIAL -->
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "IMU gyroscope" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/imu/gyroscope</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teoSim/imu/measures:o</from>
+        <to>/teoSim/imu/gyroscope/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.0+subindex.0+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "IMU linear accelerometer" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/imu/accelerometer</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teoSim/imu/measures:o</from>
+        <to>/teoSim/imu/accelerometer/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.1+subindex.0+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "IMU orientation" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teoSim/imu/orientation</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teoSim/imu/measures:o</from>
+        <to>/teoSim/imu/orientation/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.3+subindex.0+subsubindex.0</protocol>
     </connection>
 
     <!-- JOINT -->
@@ -120,6 +186,32 @@
         <parameters>-e "yarp rpc /teoSim/rightLeg/rpc:i"</parameters>
         <node>localhost</node>
     </module>
+
+    <!-- CARTESIAN -->
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/rightArm/CartesianControl/rpc:s"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/leftArm/CartesianControl/rpc:s"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/rightLeg/CartesianControl/rpc:s"</parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>gnome-terminal</name>
+        <parameters>-e "yarp rpc /teoSim/leftLeg/CartesianControl/rpc:s"</parameters>
+        <node>localhost</node>
+    </module>
+
 
     <!-- MOTORS -->
     <module>

@@ -4,7 +4,7 @@
     <!-- VISION -->
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teo/xtion/rgbImage:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/rgbImage:i --title "RGB"</parameters>
         <node>localhost</node>
     </module>
 
@@ -16,7 +16,7 @@
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teo/xtion/depthImageMono:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/depthImageMono:i --title "Depth"</parameters>
         <node>localhost</node>
     </module>
 
@@ -28,7 +28,7 @@
 
     <module>
         <name>yarpview</name>
-        <parameters>--name /yarpview/teo/xtion/depthImageRGB:i</parameters>
+        <parameters>--name /yarpview/teo/xtion/depthImageRGB:i --title "Depth RGB"</parameters>
         <node>localhost</node>
     </module>
 
@@ -60,39 +60,95 @@
     <!-- FORCE -->
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /teo/jr3/ch0:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/teo/jr3/ch0:o</prefix>
+        <parameters>--title "Right leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teo/forceTorque/rightLeg</prefix>
         <node>localhost</node>
     </module>
 
-    <module>
-        <name>yarpscope</name>
-        <parameters>--remote /teo/jr3/ch1:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 512 --dx 640 --dy 512</parameters>
-        <prefix>/teo/jr3/ch1:o</prefix>
-        <node>localhost</node>
-    </module>
+    <connection>
+        <from>/teo/forceTorque/measures:o</from>
+        <to>/teo/forceTorque/rightLeg/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.0+subsubindex.0</protocol>
+    </connection>
 
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /teo/jr3/ch2:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 0 --dx 640 --dy 512</parameters>
-        <prefix>/teo/jr3/ch2:o</prefix>
+        <parameters>--title "Left leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 512 --dx 640 --dy 512</parameters>
+        <prefix>/teo/forceTorque/leftLeg</prefix>
         <node>localhost</node>
     </module>
 
+    <connection>
+        <from>/teo/forceTorque/measures:o</from>
+        <to>/teo/forceTorque/leftLeg/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.1+subsubindex.0</protocol>
+    </connection>
+
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /teo/jr3/ch3:o --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 0 --dx 640 --dy 512</parameters>
-        <prefix>/teo/jr3/ch3:o</prefix>
+        <parameters>--title "Right arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/forceTorque/rightArm</prefix>
         <node>localhost</node>
     </module>
+
+    <connection>
+        <from>/teo/forceTorque/measures:o</from>
+        <to>/teo/forceTorque/rightArm/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.2+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "Left arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/forceTorque/leftArm</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teo/forceTorque/measures:o</from>
+        <to>/teo/forceTorque/leftArm/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.5+subindex.3+subsubindex.0</protocol>
+    </connection>
 
     <!-- INERTIAL -->
     <module>
         <name>yarpscope</name>
-        <parameters>--remote /teo/inertial --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
-        <prefix>/teo/inertial</prefix>
+        <parameters>--title "IMU gyroscope" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/imu/gyroscope</prefix>
         <node>localhost</node>
     </module>
+
+    <connection>
+        <from>/teo/imu/measures:o</from>
+        <to>/teo/imu/gyroscope/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.0+subindex.0+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "IMU linear accelerometer" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/imu/accelerometer</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teo/imu/measures:o</from>
+        <to>/teo/imu/accelerometer/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.1+subindex.0+subsubindex.0</protocol>
+    </connection>
+
+    <module>
+        <name>yarpscope</name>
+        <parameters>--title "IMU orientation" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <prefix>/teo/imu/orientation</prefix>
+        <node>localhost</node>
+    </module>
+
+    <connection>
+        <from>/teo/imu/measures:o</from>
+        <to>/teo/imu/orientation/yarpscope</to>
+        <protocol>udp+recv.portmonitor+type.dll+file.BottleExtract+index.3+subindex.0+subsubindex.0</protocol>
+    </connection>
 
     <!-- JOINT -->
     <module>
