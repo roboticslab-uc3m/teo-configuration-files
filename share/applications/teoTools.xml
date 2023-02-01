@@ -60,7 +60,7 @@
     <!-- FORCE -->
     <module>
         <name>yarpscope</name>
-        <parameters>--title "Right leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 512 --dx 640 --dy 512</parameters>
+        <parameters>--title "Right leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 0 --y 0 --dx 640 --dy 512</parameters>
         <prefix>/teo/forceTorque/rightLeg</prefix>
         <node>localhost</node>
     </module>
@@ -73,7 +73,7 @@
 
     <module>
         <name>yarpscope</name>
-        <parameters>--title "Left leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 512 --dx 640 --dy 512</parameters>
+        <parameters>--title "Left leg FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 0 --y 512 --dx 640 --dy 512</parameters>
         <prefix>/teo/forceTorque/leftLeg</prefix>
         <node>localhost</node>
     </module>
@@ -86,7 +86,7 @@
 
     <module>
         <name>yarpscope</name>
-        <parameters>--title "Right arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <parameters>--title "Right arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 0 --dx 640 --dy 512</parameters>
         <prefix>/teo/forceTorque/rightArm</prefix>
         <node>localhost</node>
     </module>
@@ -99,7 +99,7 @@
 
     <module>
         <name>yarpscope</name>
-        <parameters>--title "Left arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -1000 --max 1000 --x 640 --y 0 --dx 640 --dy 512</parameters>
+        <parameters>--title "Left arm FT sensor" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --x 640 --y 512 --dx 640 --dy 512</parameters>
         <prefix>/teo/forceTorque/leftArm</prefix>
         <node>localhost</node>
     </module>
@@ -113,7 +113,7 @@
     <!-- INERTIAL -->
     <module>
         <name>yarpscope</name>
-        <parameters>--title "IMU gyroscope" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <parameters>--title "IMU gyroscope" --index "(0 1 2)" --color "(Red Green Blue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
         <prefix>/teo/imu/gyroscope</prefix>
         <node>localhost</node>
     </module>
@@ -126,7 +126,7 @@
 
     <module>
         <name>yarpscope</name>
-        <parameters>--title "IMU linear accelerometer" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <parameters>--title "IMU linear accelerometer" --index "(0 1 2)" --color "(Red Green Blue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
         <prefix>/teo/imu/accelerometer</prefix>
         <node>localhost</node>
     </module>
@@ -139,7 +139,7 @@
 
     <module>
         <name>yarpscope</name>
-        <parameters>--title "IMU orientation" --index "(0 1 2 3 4 5)" --color "(Red Green Blue LightRed LightGreen LightBlue)" --min -100 --max 100 --x 0 --y 0 --dx 640 --dy 512</parameters>
+        <parameters>--title "IMU orientation" --index "(0 1 2)" --color "(Red Green Blue)" --min -180 --max 180 --x 0 --y 0 --dx 640 --dy 512</parameters>
         <prefix>/teo/imu/orientation</prefix>
         <node>localhost</node>
     </module>
