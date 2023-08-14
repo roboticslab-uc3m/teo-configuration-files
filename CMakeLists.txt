@@ -5,7 +5,7 @@ project(TEO_CONFIGURATION_FILES LANGUAGES NONE)
 
 # Find dependencies.
 find_package(YCM 0.11 REQUIRED)
-find_package(YARP 3.2 REQUIRED)
+find_package(YARP 3.7 REQUIRED)
 
 # Set some useful variables - paths relative to the installation prefix.
 yarp_configure_external_installation(teo-configuration-files)
