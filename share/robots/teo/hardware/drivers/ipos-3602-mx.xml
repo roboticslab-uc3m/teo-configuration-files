@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- iPOS3602 MX Intelligent Drive (75 W, CANopen / EtherCAT) -->
+<group name="driver">
+    <param name="peakCurrent">3.2</param>
+</group>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- frontal left wrist (FLW) joint with iPOS drive -->
+<device name="ID26" type="TechnosoftIpos" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common-ipos.xml" />
+    <xi:include href="../hardware/drivers/ipos-3602-mx.xml" />
+    <xi:include href="../hardware/motors/maxon-339282.xml" />
+    <xi:include href="../hardware/gearboxes/hd-100.xml" />
+    <xi:include href="../hardware/encoders/cui-amt20.xml" />
+
+    <param name="name">FrontalLeftWrist</param>
+    <param name="canId">26</param>
+    <param name="max">61.3</param>
+    <param name="min">-113.3</param>
+    <param name="samplingPeriod">0.001</param>
+    <param name="reverse">false</param>
+    <param name="externalEncoder">id126-cui</param>
+    <param name="driveStateTimeout">3.0</param> <!-- something is wrong with this iPOS -->
+
+</device>

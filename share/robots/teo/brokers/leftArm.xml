@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="leftArm" type="CanBusBroker">
+    <paramlist name="buses">
+        <elem name="socket-leftArm"></elem>
+    </paramlist>
+    <param name="syncPeriod">0.02</param>
+</device>

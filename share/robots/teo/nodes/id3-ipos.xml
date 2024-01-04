@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- frontal right knee (FRK) joint with iPOS drive -->
+<device name="ID3" type="TechnosoftIpos" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common-ipos.xml" />
+    <xi:include href="../hardware/drivers/ipos-4808-mx.xml" />
+    <xi:include href="../hardware/motors/maxon-402686.xml" />
+    <xi:include href="../hardware/gearboxes/hd-160.xml" />
+    <xi:include href="../hardware/encoders/cui-amt20.xml" />
+
+    <param name="name">FrontalRightKnee</param>
+    <param name="canId">3</param>
+    <param name="max">82.4</param>
+    <param name="min">-61.3</param>
+    <param name="samplingPeriod">0.001</param>
+    <param name="extraTr">1.47</param>
+    <param name="reverse">false</param>
+    <param name="externalEncoder">id103-cui</param>
+
+</device>

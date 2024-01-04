@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- left hand Lacquey gripper -->
+<device name="ID64" type="LacqueyFetch">
+    <param name="canId">64</param>
+    <param name="name">LeftGripper</param>
+</device>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- JR3 force/torque sensor for the left foot -->
+<device name="ID32" type="Jr3Mbed" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./common-jr3.xml" />
+    <param name="canId">32</param>
+    <param name="name">leftFoot</param>
+    <!--<param name="fullScales">(326 325 870 224 224 309)</param>-->
+</device>

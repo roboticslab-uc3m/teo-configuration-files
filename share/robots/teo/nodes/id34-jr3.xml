@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- JR3 force/torque sensor for the left hand -->
+<device name="ID34" type="Jr3Mbed" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./common-jr3.xml" />
+    <param name="canId">34</param>
+    <param name="name">leftHand</param>
+    <!--<param name="fullScales">(114 106 184 55 52 60)</param>-->
+</device>

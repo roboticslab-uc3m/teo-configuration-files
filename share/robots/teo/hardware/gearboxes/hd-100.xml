@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Harmonic Drive 100 -->
+<group name="gearbox">
+    <param name="tr">100.0</param>
+</group>

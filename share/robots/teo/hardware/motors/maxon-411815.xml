@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- EC 45 flat Ø45 mm, brushless, 70 W, with Hall sensors, with cable -->
+<group name="motor">
+    <param name="k">0.0533</param>
+</group>

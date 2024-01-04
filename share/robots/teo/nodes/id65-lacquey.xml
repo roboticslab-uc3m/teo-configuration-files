@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- right hand Lacquey gripper -->
+<device name="ID65" type="LacqueyFetch">
+    <param name="canId">65</param>
+    <param name="name">RightGripper</param>
+</device>

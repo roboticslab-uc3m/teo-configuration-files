@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="rightLegMapper" type="controlboardremapper">
+    <param name="AxesNames">
+        (AxialRightHip SagittalRightHip FrontalRightHip FrontalRightKnee FrontalRightAnkle SagittalRightAnkle)
+    </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="AxialRightHip">ID6</elem>
+            <elem name="SagittalRightHip">ID5</elem>
+            <elem name="FrontalRightHip">ID4</elem>
+            <elem name="FrontalRightKnee">ID3</elem>
+            <elem name="FrontalRightAnkle">ID2</elem>
+            <elem name="SagittalRightAnkle">ID1</elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="20" type="detach" />
+</device>

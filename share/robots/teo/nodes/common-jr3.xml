@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group name="common">
+    <param name="ackTimeout">0.25</param>
+    <param name="monitorPeriod">0.1</param>
+    <param name="diagnosticsPeriod">0.0</param> <!-- disabled -->
+    <param name="filter">2.0</param>
+</group>

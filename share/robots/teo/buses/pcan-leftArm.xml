@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- PeakCAN bus on TEO's left arm -->
+<device name="can3" type="CanBusPeak" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./common-pcan.xml" />
+    <param name="name">/can/leftArm</param>
+    <param name="port">/dev/pcan3</param>
+</device>

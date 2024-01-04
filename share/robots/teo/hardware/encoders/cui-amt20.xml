@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 28 mm, 12 Bit, Single-Turn, Absolute, SPI Interface, Capacitive Modular Encoder -->
+<group name="encoder">
+    <param name="encoderPulses">4096</param>
+</group>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="rightArmMapper" type="controlboardremapper">
+    <param name="AxesNames">
+        (FrontalRightShoulder SagittalRightShoulder AxialRightShoulder FrontalRightElbow AxialRightWrist FrontalRightWrist)
+    </param>
+    <action phase="startup" level="5" type="attach">
+        <paramlist name="networks">
+            <elem name="FrontalRightShoulder">ID15</elem>
+            <elem name="SagittalRightShoulder">ID16</elem>
+            <elem name="AxialRightShoulder">ID17</elem>
+            <elem name="FrontalRightElbow">ID18</elem>
+            <elem name="AxialRightWrist">ID19</elem>
+            <elem name="FrontalRightWrist">ID20</elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="20" type="detach" />
+</device>

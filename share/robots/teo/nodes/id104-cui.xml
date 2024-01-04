@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- frontal right hip (FRH) absolute encoder -->
+<device name="ID104" type="CuiAbsolute" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./common-cui.xml" />
+    <param name="canId">104</param>
+    <param name="reverse">false</param>
+</device>

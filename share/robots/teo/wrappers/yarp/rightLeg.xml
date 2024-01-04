@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="rightLegWrapper" type="controlBoard_nws_yarp">
+    <param name="name">${portprefix}/rightLeg</param>
+    <param name="period">0.01</param>
+    <action phase="startup" level="5" type="attach">
+        <param name="device">rightLegMapper</param>
+    </action>
+    <action phase="shutdown" level="20" type="detach" />
+</device>
