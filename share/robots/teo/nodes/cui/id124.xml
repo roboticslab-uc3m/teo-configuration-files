@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- frontal left elbow (FLE) absolute encoder -->
+<device name="ID124" type="CuiAbsolute" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./common.xml" />
+    <param name="canId">124</param>
+    <param name="reverse">false</param>
+</device>

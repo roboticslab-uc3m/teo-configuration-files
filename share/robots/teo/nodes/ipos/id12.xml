@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- sagittal left ankle (SLA) joint with iPOS drive -->
+<device name="ID12" type="TechnosoftIpos" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common.xml" />
+    <xi:include href="../../hardware/drivers/ipos-4808-mx.xml" />
+    <xi:include href="../../hardware/motors/maxon-402686.xml" />
+    <xi:include href="../../hardware/gearboxes/hd-160.xml" />
+    <xi:include href="../../hardware/encoders/cui-amt20.xml" />
+
+    <param name="name">SagittalLeftAnkle</param>
+    <param name="canId">12</param>
+    <param name="max">19.9</param>
+    <param name="min">-42.5</param>
+    <param name="samplingPeriod">0.0005</param>
+    <param name="extraTr">1.47</param>
+    <param name="reverse">true</param>
+
+    <action phase="startup" level="5" type="attach">
+        <param name="device">ID112</param>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>

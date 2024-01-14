@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- sagittal right hip (SRH) absolute encoder -->
-<device name="ID105" type="CuiAbsolute" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <xi:include href="./common-cui.xml" />
-    <param name="canId">105</param>
-    <param name="reverse">false</param>
-</device>

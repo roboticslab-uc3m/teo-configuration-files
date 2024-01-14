@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<group name="common">
-    <param name="mode">pull</param>
-    <param name="timeout">0.25</param>
-    <param name="maxRetries">10</param>
-    <param name="encoder">cui-amt20</param>
-</group>

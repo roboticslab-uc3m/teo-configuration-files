@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<group name="common">
+    <param name="bitrate">1000000</param>
+    <param name="blockingMode">false</param>
+    <param name="allowPermissive">false</param>
+    <param name="preserveFilters">false</param>
+</group>

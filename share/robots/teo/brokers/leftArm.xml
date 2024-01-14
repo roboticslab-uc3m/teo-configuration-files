@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<device name="leftArm" type="CanBusBroker">
+<device name="broker" type="CanBusBroker" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common.xml" />
+
     <paramlist name="buses">
-        <elem name="socket-leftArm"></elem>
+        <elem name="leftArm">(FLS SLS ALS FLE ALW FLW)</elem>
     </paramlist>
-    <param name="syncPeriod">0.02</param>
+
+    <action phase="startup" level="10" type="attach">
+        <paramlist name="networks">
+            <elem name="leftArm">can3</elem>
+            <elem name="FLS">ID21</elem>
+            <elem name="SLS">ID22</elem>
+            <elem name="ALS">ID23</elem>
+            <elem name="FLE">ID24</elem>
+            <elem name="ALW">ID25</elem>
+            <elem name="FLW">ID26</elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
 </device>

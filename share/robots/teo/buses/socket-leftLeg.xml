@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- SocketCAN bus on TEO's left leg -->
-<device name="can1" type="CanBusSocket" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <xi:include href="./common-socket.xml" />
-    <param name="name">/can/leftLeg</param>
-    <param name="port">can1</param>
-</device>

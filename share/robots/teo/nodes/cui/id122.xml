@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- sagittal left shoulder (SLS) absolute encoder -->
+<device name="ID122" type="CuiAbsolute" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="./common.xml" />
+    <param name="canId">122</param>
+    <param name="reverse">false</param>
+</device>

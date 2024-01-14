@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<params xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="../global.xml" />
+
+    <group name="common">
+        <param name="rxBufferSize">500</param>
+        <param name="txBufferSize">500</param>
+        <param name="rxDelay">100e-6</param>
+        <param name="txDelay">100e-6</param>
+        <param name="busLoadPeriod">0.1</param>
+        <param name="syncObserver" extern-name="syncObserver">0</param>
+        <param name="fakeNodes" extern-name="fakeNodes">()</param>
+    </group>
+
+</params>

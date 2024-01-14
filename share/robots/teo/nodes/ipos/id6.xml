@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- axial right hip (ARH) joint with iPOS drive -->
+<device name="ID6" type="TechnosoftIpos" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common.xml" />
+    <xi:include href="../../hardware/drivers/ipos-4808-mx.xml" />
+    <xi:include href="../../hardware/motors/maxon-339287.xml" />
+    <xi:include href="../../hardware/gearboxes/hd-160.xml" />
+    <xi:include href="../../hardware/encoders/cui-amt20.xml" />
+
+    <param name="name">AxialRightHip</param>
+    <param name="canId">6</param>
+    <param name="max">27.9</param>
+    <param name="min">-32.8</param>
+    <param name="samplingPeriod">0.0005</param>
+    <param name="extraTr">2.5</param>
+    <param name="reverse">false</param>
+
+    <action phase="startup" level="5" type="attach">
+        <param name="device">ID106</param>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- frontal right shoulder (FRS) joint with iPOS drive -->
+<device name="ID15" type="TechnosoftIpos" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common.xml" />
+    <xi:include href="../../hardware/drivers/ipos-3604-mx.xml" />
+    <xi:include href="../../hardware/motors/maxon-411815.xml" />
+    <xi:include href="../../hardware/gearboxes/hd-160.xml" />
+    <xi:include href="../../hardware/encoders/cui-amt20.xml" />
+
+    <param name="name">FrontalRightShoulder</param>
+    <param name="canId">15</param>
+    <param name="max">106.0</param>
+    <param name="min">-98.1</param>
+    <param name="samplingPeriod">0.001</param>
+    <param name="reverse">true</param>
+
+    <action phase="startup" level="5" type="attach">
+        <param name="device">ID115</param>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>
