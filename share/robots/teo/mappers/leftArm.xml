@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <device name="leftArmMapper" type="controlboardremapper">
-    <param name="AxesNames">
-        (FrontalLeftShoulder SagittalLeftShoulder AxialLeftShoulder FrontalLeftElbow AxialLeftWrist FrontalLeftWrist)
+
+    <param name="axesNames">
+        (FrontalLeftShoulder
+         SagittalLeftShoulder
+         AxialLeftShoulder
+         FrontalLeftElbow
+         AxialLeftWrist
+         FrontalLeftWrist)
     </param>
-    <action phase="startup" level="5" type="attach">
-        <paramlist name="networks">
-            <elem name="FrontalLeftShoulder">ID21</elem>
-            <elem name="SagittalLeftShoulder">ID22</elem>
-            <elem name="AxialLeftShoulder">ID23</elem>
-            <elem name="FrontalLeftElbow">ID24</elem>
-            <elem name="AxialLeftWrist">ID25</elem>
-            <elem name="FrontalLeftWrist">ID26</elem>
-        </paramlist>
+
+    <action phase="startup" level="15" type="attach">
+        <param name="device">broker</param>
     </action>
-    <action phase="shutdown" level="20" type="detach" />
+
+    <action phase="shutdown" level="50" type="detach" />
+
 </device>

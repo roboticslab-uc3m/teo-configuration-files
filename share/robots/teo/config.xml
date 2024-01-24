@@ -21,4 +21,8 @@
 
     <xi:include href="./brokers/leftArm.xml" />
 
+    <xi:include href="./mappers/leftArm.xml" />
+
+    <xi:include href="./wrappers/yarp/leftArm.xml" />
+
 </robot>
