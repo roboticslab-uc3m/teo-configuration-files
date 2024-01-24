@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="broker" type="CanBusBroker" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./common.xml" />
+
+    <paramlist name="buses">
+        <elem name="leftLeg" >(AT ALH SLH FLH FLK FLA SLA FTLF)</elem>
+        <elem name="rightLeg">(FT ARH SRH FRH FRK FRA SRA FTRF)</elem>
+    </paramlist>
+
+    <action phase="startup" level="10" type="attach">
+        <paramlist name="networks">
+            <!-- buses -->
+            <elem name="rightLeg">can0</elem>
+            <elem name="leftLeg" >can1</elem>
+            <!-- driver nodes -->
+            <elem name="SRA">ID1</elem>
+            <elem name="FRA">ID2</elem>
+            <elem name="FRK">ID3</elem>
+            <elem name="FRH">ID4</elem>
+            <elem name="SRH">ID5</elem>
+            <elem name="ARH">ID6</elem>
+            <elem name="ALH">ID7</elem>
+            <elem name="SLH">ID8</elem>
+            <elem name="FLH">ID9</elem>
+            <elem name="FLK">ID10</elem>
+            <elem name="FLA">ID11</elem>
+            <elem name="SLA">ID12</elem>
+            <elem name="AT" >ID13</elem>
+            <elem name="FT" >ID14</elem>
+            <!-- sensor nodes -->
+            <elem name="FTRF">ID31</elem>
+            <elem name="FTLF">ID32</elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>

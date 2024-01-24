@@ -15,12 +15,12 @@
     <param name="min">-113.3</param>
     <param name="samplingPeriod">0.001</param>
     <param name="reverse">false</param>
+    <param name="driveStateTimeout">3.0</param> <!-- something is wrong with this iPOS -->
 
     <action phase="startup" level="5" type="attach">
         <param name="device">ID126</param>
     </action>
 
     <action phase="shutdown" level="50" type="detach" />
-    <param name="driveStateTimeout">3.0</param> <!-- something is wrong with this iPOS -->
 
 </device>

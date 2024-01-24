@@ -5,22 +5,22 @@
     <xi:include href="./common.xml" />
 
     <paramlist name="buses">
-        <elem name="leftArm">(FLS SLS ALS FLE ALW FLW FTLH)</elem>
+        <elem name="rightArm">(FRS SRS ARS FRE ARW FRW FTRH)</elem>
     </paramlist>
 
     <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
             <!-- buses -->
-            <elem name="leftArm">can3</elem>
+            <elem name="rightArm">can2</elem>
             <!-- driver nodes -->
-            <elem name="FLS">ID21</elem>
-            <elem name="SLS">ID22</elem>
-            <elem name="ALS">ID23</elem>
-            <elem name="FLE">ID24</elem>
-            <elem name="ALW">ID25</elem>
-            <elem name="FLW">ID26</elem>
+            <elem name="FRS">ID15</elem>
+            <elem name="SRS">ID16</elem>
+            <elem name="ARS">ID17</elem>
+            <elem name="FRE">ID18</elem>
+            <elem name="ARW">ID19</elem>
+            <elem name="FRW">ID20</elem>
             <!-- sensor nodes -->
-            <elem name="FTLH">ID34</elem>
+            <elem name="FTRH">ID33</elem>
         </paramlist>
     </action>
 

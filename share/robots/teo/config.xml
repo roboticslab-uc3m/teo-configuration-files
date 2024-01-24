@@ -12,6 +12,8 @@
     <xi:include href="./nodes/ipos/id25.xml" />
     <xi:include href="./nodes/ipos/id26.xml" />
 
+    <xi:include href="./nodes/jr3/id34.xml" />
+
     <xi:include href="./nodes/cui/id121.xml" />
     <xi:include href="./nodes/cui/id122.xml" />
     <xi:include href="./nodes/cui/id123.xml" />
@@ -20,9 +22,7 @@
     <xi:include href="./nodes/cui/id126.xml" />
 
     <xi:include href="./brokers/leftArm.xml" />
-
     <xi:include href="./mappers/leftArm.xml" />
-
     <xi:include href="./wrappers/yarp/leftArm.xml" />
 
 </robot>
