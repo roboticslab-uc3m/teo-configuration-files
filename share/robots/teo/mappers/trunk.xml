@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="trunkMapper" type="controlboardremapper">
+
+    <param name="axesNames">(AxialTrunk FrontalTrunk)</param>
+
+    <action phase="startup" level="15" type="attach">
+        <param name="device">broker</param>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>

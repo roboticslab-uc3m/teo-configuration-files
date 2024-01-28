@@ -73,10 +73,12 @@
     <xi:include href="./mappers/rightArm.xml" enabled_by="rightArm" />
     <xi:include href="./mappers/leftLeg.xml" enabled_by="leftLeg" />
     <xi:include href="./mappers/rightLeg.xml" enabled_by="rightLeg" />
+    <xi:include href="./mappers/ft.xml" enabled_by="ft" />
 
     <xi:include href="./wrappers/yarp/leftArm.xml" enabled_by="leftArm" />
     <xi:include href="./wrappers/yarp/rightArm.xml" enabled_by="rightArm" />
     <xi:include href="./wrappers/yarp/leftLeg.xml" enabled_by="leftLeg" />
     <xi:include href="./wrappers/yarp/rightLeg.xml" enabled_by="rightLeg" />
+    <xi:include href="./wrappers/yarp/ft.xml" enabled_by="ft" />
 
 </robot>

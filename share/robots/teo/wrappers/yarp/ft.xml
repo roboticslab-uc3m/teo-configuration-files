@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="forceTorqueWrapper" type="multipleanalogsensorsserver">
+
+    <param name="name">${portprefix}/ft</param>
+    <param name="period">5</param>
+
+    <action phase="startup" level="20" type="attach">
+        <param name="device">forceTorqueMapper</param>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>

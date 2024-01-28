@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<device name="forceTorqueMapper" type="multipleanalogsensorsremapper">
+
+    <param name="SixAxisForceTorqueSensorsNames">
+        (rightFoot
+         leftFoot
+         rightHand
+         leftHand)
+    </param>
+
+    <action phase="startup" level="15" type="attach">
+        <param name="device">broker</param>
+    </action>
+
+    <action phase="shutdown" level="50" type="detach" />
+
+</device>

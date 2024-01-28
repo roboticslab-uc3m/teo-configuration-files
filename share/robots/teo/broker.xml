@@ -7,6 +7,8 @@
     <paramlist name="buses">
         <xi:include href="./includes/leftArmBus.xml" enabled_by="leftArm" />
         <xi:include href="./includes/rightArmBus.xml" enabled_by="rightArm" />
+        <xi:include href="./includes/leftLegBus.xml" enabled_by="leftLeg trunk" />
+        <xi:include href="./includes/rightLegBus.xml" enabled_by="rightLeg trunk" />
     </paramlist>
 
     <action phase="startup" level="10" type="attach">
@@ -15,21 +17,9 @@
             <elem name="rightArm">can2</elem>
             <elem name="leftArm" >can3</elem>
             <!-- driver nodes -->
-            <elem name="FRS">ID15</elem>
-            <elem name="SRS">ID16</elem>
-            <elem name="ARS">ID17</elem>
-            <elem name="FRE">ID18</elem>
-            <elem name="ARW">ID19</elem>
-            <elem name="FRW">ID20</elem>
-            <elem name="FLS">ID21</elem>
-            <elem name="SLS">ID22</elem>
-            <elem name="ALS">ID23</elem>
-            <elem name="FLE">ID24</elem>
-            <elem name="ALW">ID25</elem>
-            <elem name="FLW">ID26</elem>
+            <xi:include href="./includes/leftArmNodes.xml" enabled_by="leftArm" />
             <!-- sensor nodes -->
             <elem name="FTRH">ID33</elem>
-            <elem name="FTLH">ID34</elem>
         </paramlist>
     </action>
 
