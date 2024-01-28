@@ -17,7 +17,7 @@
         <param name="tpdo1InhibitTime">0.03</param>
         <param name="tpdo1EventTimer">0.25</param>
         <param name="tpdo2InhibitTime">0.03</param>
-        <param name="tpdo2EventTimer">0.0</param> <!-- disabled (default) -->
+        <param name="tpdo2EventTimer">0.0</param>
     </group>
 
     <param name="disabledEncoders" extern-name="disabledEncoders">()</param>

@@ -67,7 +67,7 @@
     <xi:include href="./nodes/cui/id125.xml" enabled_by="leftArm" />
     <xi:include href="./nodes/cui/id126.xml" enabled_by="leftArm" />
 
-    <xi:include href="./broker.xml" />
+    <xi:include href="./brokers/leftArm.xml" />
 
     <xi:include href="./mappers/leftArm.xml" enabled_by="leftArm" />
     <xi:include href="./mappers/rightArm.xml" enabled_by="rightArm" />
