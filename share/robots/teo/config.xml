@@ -5,8 +5,8 @@
 
     <xi:include href="./buses/socket/leftArm.xml" enabled_by="leftArm" />
     <xi:include href="./buses/socket/rightArm.xml" enabled_by="rightArm" />
-    <xi:include href="./buses/socket/leftLeg.xml" enabled_by="leftLeg" />
-    <xi:include href="./buses/socket/rightLeg.xml" enabled_by="rightLeg" />
+    <xi:include href="./buses/socket/leftLeg.xml" enabled_by="leftLeg trunk" />
+    <xi:include href="./buses/socket/rightLeg.xml" enabled_by="rightLeg trunk" />
 
     <xi:include href="./nodes/ipos/id1.xml" enabled_by="rightLeg" />
     <xi:include href="./nodes/ipos/id2.xml" enabled_by="rightLeg" />
@@ -20,8 +20,8 @@
     <xi:include href="./nodes/ipos/id10.xml" enabled_by="leftLeg" />
     <xi:include href="./nodes/ipos/id11.xml" enabled_by="leftLeg" />
     <xi:include href="./nodes/ipos/id12.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id13.xml" enabled_by="leftLeg trunk" />
-    <xi:include href="./nodes/ipos/id14.xml" enabled_by="rightLeg trunk" />
+    <xi:include href="./nodes/ipos/id13.xml" enabled_by="trunk" />
+    <xi:include href="./nodes/ipos/id14.xml" enabled_by="trunk" />
     <xi:include href="./nodes/ipos/id15.xml" enabled_by="rightArm" />
     <xi:include href="./nodes/ipos/id16.xml" enabled_by="rightArm" />
     <xi:include href="./nodes/ipos/id17.xml" enabled_by="rightArm" />
@@ -52,8 +52,8 @@
     <xi:include href="./nodes/cui/id110.xml" enabled_by="leftLeg" />
     <xi:include href="./nodes/cui/id111.xml" enabled_by="leftLeg" />
     <xi:include href="./nodes/cui/id112.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id113.xml" enabled_by="leftLeg trunk" />
-    <xi:include href="./nodes/cui/id114.xml" enabled_by="rightLeg trunk" />
+    <xi:include href="./nodes/cui/id113.xml" enabled_by="trunk" />
+    <xi:include href="./nodes/cui/id114.xml" enabled_by="trunk" />
     <xi:include href="./nodes/cui/id115.xml" enabled_by="rightArm" />
     <xi:include href="./nodes/cui/id116.xml" enabled_by="rightArm" />
     <xi:include href="./nodes/cui/id117.xml" enabled_by="rightArm" />
@@ -67,16 +67,18 @@
     <xi:include href="./nodes/cui/id125.xml" enabled_by="leftArm" />
     <xi:include href="./nodes/cui/id126.xml" enabled_by="leftArm" />
 
-    <xi:include href="./brokers/leftArm.xml" />
+    <xi:include href="./brokers/leftArm.xml" enabled_by="leftArm" />
 
     <xi:include href="./mappers/leftArm.xml" enabled_by="leftArm" />
     <xi:include href="./mappers/rightArm.xml" enabled_by="rightArm" />
+    <xi:include href="./mappers/trunk.xml" enabled_by="trunk" />
     <xi:include href="./mappers/leftLeg.xml" enabled_by="leftLeg" />
     <xi:include href="./mappers/rightLeg.xml" enabled_by="rightLeg" />
     <xi:include href="./mappers/ft.xml" enabled_by="ft" />
 
     <xi:include href="./wrappers/yarp/leftArm.xml" enabled_by="leftArm" />
     <xi:include href="./wrappers/yarp/rightArm.xml" enabled_by="rightArm" />
+    <xi:include href="./wrappers/yarp/trunk.xml" enabled_by="trunk" />
     <xi:include href="./wrappers/yarp/leftLeg.xml" enabled_by="leftLeg" />
     <xi:include href="./wrappers/yarp/rightLeg.xml" enabled_by="rightLeg" />
     <xi:include href="./wrappers/yarp/ft.xml" enabled_by="ft" />

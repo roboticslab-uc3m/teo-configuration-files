@@ -4,9 +4,8 @@
 
     <xi:include href="./common.xml" />
 
-    <paramlist name="buses">
-        <elem name="leftArm">(FLS SLS ALS FLE ALW FLW FTLH)</elem>
-    </paramlist>
+    <param name="bus">leftArm</param>
+    <param name="nodes">(FLS SLS ALS FLE ALW FLW FTLH)</param>
 
     <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
