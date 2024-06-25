@@ -9,6 +9,6 @@
         <param name="device">leftLegMapper</param>
     </action>
 
-    <action phase="shutdown" level="50" type="detach" />
+    <action phase="shutdown" level="40" type="detach" />
 
 </device>

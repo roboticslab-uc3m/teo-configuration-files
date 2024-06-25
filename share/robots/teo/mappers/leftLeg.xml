@@ -12,9 +12,9 @@
     </param>
 
     <action phase="startup" level="15" type="attach">
-        <param name="device">broker</param>
+        <param name="device">leftLegBroker</param>
     </action>
 
-    <action phase="shutdown" level="50" type="detach" />
+    <action phase="shutdown" level="45" type="detach" />
 
 </device>

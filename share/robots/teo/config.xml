@@ -3,84 +3,87 @@
 
 <robot name="teo" portprefix="/teo" build="0" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <xi:include href="./buses/socket/leftArm.xml" enabled_by="leftArm" />
-    <xi:include href="./buses/socket/rightArm.xml" enabled_by="rightArm" />
-    <xi:include href="./buses/socket/leftLeg.xml" enabled_by="leftLeg trunk" />
-    <xi:include href="./buses/socket/rightLeg.xml" enabled_by="rightLeg trunk" />
+    <xi:include href="./buses/socket/leftArm.xml" disabled_by="leftArm" />
+    <xi:include href="./buses/socket/rightArm.xml" disabled_by="rightArm" />
+    <xi:include href="./buses/socket/leftLeg.xml" disabled_by="leftLeg" />
+    <xi:include href="./buses/socket/rightLeg.xml" disabled_by="rightLeg" />
 
-    <xi:include href="./nodes/ipos/id1.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/ipos/id2.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/ipos/id3.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/ipos/id4.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/ipos/id5.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/ipos/id6.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/ipos/id7.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id8.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id9.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id10.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id11.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id12.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/ipos/id13.xml" enabled_by="trunk" />
-    <xi:include href="./nodes/ipos/id14.xml" enabled_by="trunk" />
-    <xi:include href="./nodes/ipos/id15.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/ipos/id16.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/ipos/id17.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/ipos/id18.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/ipos/id19.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/ipos/id20.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/ipos/id21.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/ipos/id22.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/ipos/id23.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/ipos/id24.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/ipos/id25.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/ipos/id26.xml" enabled_by="leftArm" />
+    <xi:include href="./nodes/ipos/id1.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/ipos/id2.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/ipos/id3.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/ipos/id4.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/ipos/id5.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/ipos/id6.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/ipos/id7.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/ipos/id8.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/ipos/id9.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/ipos/id10.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/ipos/id11.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/ipos/id12.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/ipos/id13.xml" disabled_by="trunk" />
+    <xi:include href="./nodes/ipos/id14.xml" disabled_by="trunk" />
+    <xi:include href="./nodes/ipos/id15.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/ipos/id16.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/ipos/id17.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/ipos/id18.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/ipos/id19.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/ipos/id20.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/ipos/id21.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/ipos/id22.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/ipos/id23.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/ipos/id24.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/ipos/id25.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/ipos/id26.xml" disabled_by="leftArm" />
 
-    <xi:include href="./nodes/jr3/id31.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/jr3/id32.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/jr3/id33.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/jr3/id34.xml" enabled_by="leftArm" />
+    <xi:include href="./nodes/jr3/id31.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/jr3/id32.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/jr3/id33.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/jr3/id34.xml" disabled_by="leftArm" />
 
-    <xi:include href="./nodes/cui/id101.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/cui/id102.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/cui/id103.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/cui/id104.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/cui/id105.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/cui/id106.xml" enabled_by="rightLeg" />
-    <xi:include href="./nodes/cui/id107.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id108.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id109.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id110.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id111.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id112.xml" enabled_by="leftLeg" />
-    <xi:include href="./nodes/cui/id113.xml" enabled_by="trunk" />
-    <xi:include href="./nodes/cui/id114.xml" enabled_by="trunk" />
-    <xi:include href="./nodes/cui/id115.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/cui/id116.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/cui/id117.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/cui/id118.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/cui/id119.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/cui/id120.xml" enabled_by="rightArm" />
-    <xi:include href="./nodes/cui/id121.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/cui/id122.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/cui/id123.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/cui/id124.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/cui/id125.xml" enabled_by="leftArm" />
-    <xi:include href="./nodes/cui/id126.xml" enabled_by="leftArm" />
+    <xi:include href="./nodes/cui/id101.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/cui/id102.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/cui/id103.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/cui/id104.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/cui/id105.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/cui/id106.xml" disabled_by="rightLeg" />
+    <xi:include href="./nodes/cui/id107.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/cui/id108.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/cui/id109.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/cui/id110.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/cui/id111.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/cui/id112.xml" disabled_by="leftLeg" />
+    <xi:include href="./nodes/cui/id113.xml" disabled_by="trunk" />
+    <xi:include href="./nodes/cui/id114.xml" disabled_by="trunk" />
+    <xi:include href="./nodes/cui/id115.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/cui/id116.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/cui/id117.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/cui/id118.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/cui/id119.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/cui/id120.xml" disabled_by="rightArm" />
+    <xi:include href="./nodes/cui/id121.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/cui/id122.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/cui/id123.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/cui/id124.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/cui/id125.xml" disabled_by="leftArm" />
+    <xi:include href="./nodes/cui/id126.xml" disabled_by="leftArm" />
 
     <xi:include href="./brokers/leftArm.xml" enabled_by="leftArm" />
+    <xi:include href="./brokers/rightArm.xml" enabled_by="rightArm" />
+    <xi:include href="./brokers/leftLeg.xml" enabled_by="leftLeg" />
+    <xi:include href="./brokers/rightLeg.xml" enabled_by="rightLeg" />
 
-    <xi:include href="./mappers/leftArm.xml" enabled_by="leftArm" />
-    <xi:include href="./mappers/rightArm.xml" enabled_by="rightArm" />
-    <xi:include href="./mappers/trunk.xml" enabled_by="trunk" />
-    <xi:include href="./mappers/leftLeg.xml" enabled_by="leftLeg" />
-    <xi:include href="./mappers/rightLeg.xml" enabled_by="rightLeg" />
+    <xi:include href="./mappers/leftArm.xml" disabled_by="leftArm" />
+    <xi:include href="./mappers/rightArm.xml" disabled_by="rightArm" />
+    <xi:include href="./mappers/trunk.xml" disabled_by="trunk" />
+    <xi:include href="./mappers/leftLeg.xml" disabled_by="leftLeg" />
+    <xi:include href="./mappers/rightLeg.xml" disabled_by="rightLeg" />
     <xi:include href="./mappers/ft.xml" enabled_by="ft" />
 
-    <xi:include href="./wrappers/yarp/leftArm.xml" enabled_by="leftArm" />
-    <xi:include href="./wrappers/yarp/rightArm.xml" enabled_by="rightArm" />
-    <xi:include href="./wrappers/yarp/trunk.xml" enabled_by="trunk" />
-    <xi:include href="./wrappers/yarp/leftLeg.xml" enabled_by="leftLeg" />
-    <xi:include href="./wrappers/yarp/rightLeg.xml" enabled_by="rightLeg" />
+    <xi:include href="./wrappers/yarp/leftArm.xml" disabled_by="leftArm" />
+    <xi:include href="./wrappers/yarp/rightArm.xml" disabled_by="rightArm" />
+    <xi:include href="./wrappers/yarp/trunk.xml" disabled_by="trunk" />
+    <xi:include href="./wrappers/yarp/leftLeg.xml" disabled_by="leftLeg" />
+    <xi:include href="./wrappers/yarp/rightLeg.xml" disabled_by="rightLeg" />
     <xi:include href="./wrappers/yarp/ft.xml" enabled_by="ft" />
 
 </robot>

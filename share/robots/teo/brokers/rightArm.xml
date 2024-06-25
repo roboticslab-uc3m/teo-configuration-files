@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<device name="broker" type="CanBusBroker" xmlns:xi="http://www.w3.org/2001/XInclude">
+<device name="rightArmBroker" type="CanBusBroker" xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <xi:include href="./common.xml" />
 
-    <paramlist name="buses">
-        <elem name="rightArm">(FRS SRS ARS FRE ARW FRW FTRH)</elem>
-    </paramlist>
+    <param name="bus">rightArm</param>
+    <param name="nodes">(FRS SRS ARS FRE ARW FRW FTRH)</param>
 
     <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
