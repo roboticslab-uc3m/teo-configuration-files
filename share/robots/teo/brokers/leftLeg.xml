@@ -5,11 +5,11 @@
     <xi:include href="./common.xml" />
 
     <param name="bus">leftLeg</param>
-    <param name="nodes">(ALH SLH FLH FLK FLA SLA FTLF)</param>
+    <param name="nodes">(ALH SLH FLH FLK FLA SLA AT FTLF)</param>
 
     <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
-            <!-- buses -->
+            <!-- bus -->
             <elem name="leftLeg">can1</elem>
             <!-- driver nodes -->
             <elem name="ALH">ID7</elem>
@@ -18,6 +18,7 @@
             <elem name="FLK">ID10</elem>
             <elem name="FLA">ID11</elem>
             <elem name="SLA">ID12</elem>
+            <elem name="AT">ID13</elem>
             <!-- sensor nodes -->
             <elem name="FTLF">ID31</elem>
         </paramlist>

@@ -9,7 +9,7 @@
 
     <action phase="startup" level="10" type="attach">
         <paramlist name="networks">
-            <!-- buses -->
+            <!-- bus -->
             <elem name="rightArm">can2</elem>
             <!-- driver nodes -->
             <elem name="FRS">ID15</elem>
