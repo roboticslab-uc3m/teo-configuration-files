@@ -10,6 +10,9 @@ find_package(YARP 3.7 REQUIRED)
 # Set some useful variables - paths relative to the installation prefix.
 yarp_configure_external_installation(teo-configuration-files)
 
+# Standard installation directories.
+include(GNUInstallDirs)
+
 # Traverse subdirectories.
 add_subdirectory(share)
 add_subdirectory(scripts)
