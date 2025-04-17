@@ -21,9 +21,4 @@ sudo make install # Install :-)
 cd # go home
 ```
 
-For CMake `find_package(TEO_CONFIGURATION_FILES REQUIRED)`, you may also be interested in adding the following to your `~/.bashrc` or `~/.profile`:
-```bash
-export TEO_CONFIGURATION_FILES_DIR=/path/to/teo-configuration-files/build
-```
-
-For additional `teo-configuration-files` options use ccmake instead of cmake.
+For additional `teo-configuration-files` options, use `ccmake` instead of `cmake`.

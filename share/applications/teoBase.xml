@@ -53,28 +53,28 @@
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /rightArm/CartesianControl --kinematics teo-fixedTrunk-rightArm-fetch.ini --ik st --angleRepr axisAngle --local /BasicCartesianControl/teo/rightArm --remote /teo/rightArm</parameters>
+        <parameters>--name /rightArm/CartesianControl --kinematics teo-fixedTrunk-rightArm-fetch.ini --ikPos st --angleRepr axisAngle --local /BasicCartesianControl/teo/rightArm --remote /teo/rightArm</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/trunkAndRightArm/CartesianControl --kinematics teo-trunk-rightArm-fetch.ini --ik nrjl --angleRepr axisAngle --robot remotecontrolboardremapper --localPortPrefix /BasicCartesianControl/teo/trunkAndRightArm --axesNames "(AxialTrunk FrontalTrunk FrontalRightShoulder SagittalRightShoulder AxialRightShoulder FrontalRightElbow AxialRightWrist FrontalRightWrist)" --remoteControlBoards "(/teo/trunk /teo/rightArm)"</parameters>
+        <parameters>--name /teo/trunkAndRightArm/CartesianControl --kinematics teo-trunk-rightArm-fetch.ini --ikPos nrjl --angleRepr axisAngle --robot remotecontrolboardremapper --localPortPrefix /BasicCartesianControl/teo/trunkAndRightArm --axesNames "(AxialTrunk FrontalTrunk FrontalRightShoulder SagittalRightShoulder AxialRightShoulder FrontalRightElbow AxialRightWrist FrontalRightWrist)" --remoteControlBoards "(/teo/trunk /teo/rightArm)"</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/leftArm/CartesianControl --kinematics teo-fixedTrunk-leftArm-fetch.ini --ik st --angleRepr axisAngle --local /BasicCartesianControl/teo/leftArm --remote /teo/leftArm</parameters>
+        <parameters>--name /teo/leftArm/CartesianControl --kinematics teo-fixedTrunk-leftArm-fetch.ini --ikPos st --angleRepr axisAngle --local /BasicCartesianControl/teo/leftArm --remote /teo/leftArm</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/trunkAndLeftArm/CartesianControl --kinematics teo-trunk-leftArm-fetch.ini --ik nrjl --angleRepr axisAngle --robot remotecontrolboardremapper --localPortPrefix /BasicCartesianControl/teo/trunkAndLeftArm --axesNames "(AxialTrunk FrontalTrunk FrontalLeftShoulder SagittalLeftShoulder AxialLeftShoulder FrontalLeftElbow AxialLeftWrist FrontalLeftWrist)" --remoteControlBoards "(/teo/trunk /teo/leftArm)"</parameters>
+        <parameters>--name /teo/trunkAndLeftArm/CartesianControl --kinematics teo-trunk-leftArm-fetch.ini --ikPos nrjl --angleRepr axisAngle --robot remotecontrolboardremapper --localPortPrefix /BasicCartesianControl/teo/trunkAndLeftArm --axesNames "(AxialTrunk FrontalTrunk FrontalLeftShoulder SagittalLeftShoulder AxialLeftShoulder FrontalLeftElbow AxialLeftWrist FrontalLeftWrist)" --remoteControlBoards "(/teo/trunk /teo/leftArm)"</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
@@ -83,14 +83,14 @@
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/rightLeg/CartesianControl --kinematics teo-rightLeg.ini --ik st --angleRepr axisAngle --local /BasicCartesianControl/teo/rightLeg --remote /teo/rightLeg</parameters>
+        <parameters>--name /teo/rightLeg/CartesianControl --kinematics teo-rightLeg.ini --ikPos st --angleRepr axisAngle --local /BasicCartesianControl/teo/rightLeg --remote /teo/rightLeg</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
 
     <module>
         <name>BasicCartesianControl</name>
-        <parameters>--name /teo/leftLeg/CartesianControl --kinematics teo-leftLeg.ini --ik st --angleRepr axisAngle --local /BasicCartesianControl/teo/leftLeg --remote /teo/leftLeg</parameters>
+        <parameters>--name /teo/leftLeg/CartesianControl --kinematics teo-leftLeg.ini --ikPos st --angleRepr axisAngle --local /BasicCartesianControl/teo/leftLeg --remote /teo/leftLeg</parameters>
         <node>localhost</node>
         <deployer>yarpdev</deployer>
     </module>
