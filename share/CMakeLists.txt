@@ -10,7 +10,8 @@ yarp_install(DIRECTORY yarpmotorgui
                        ../doc/fig
              DESTINATION ${TEO-CONFIGURATION-FILES_DATA_INSTALL_DIR})
 
-yarp_install(DIRECTORY contexts/kinematics
+yarp_install(DIRECTORY contexts/coupling
+                       contexts/kinematics
                        contexts/launchCanBus
              DESTINATION ${TEO-CONFIGURATION-FILES_CONTEXTS_INSTALL_DIR})
 
